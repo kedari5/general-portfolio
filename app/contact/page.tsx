@@ -76,7 +76,7 @@ function ContactForm() {
 
         try {
             await fetch(
-                "https://script.google.com/macros/s/AKfycbzFUlXxWpu-kAXVFFvBKqtCz1Y6C0IatsKVu52UTLRlMGBpHa4DUhC36TFjp2WqnTYG/exec",
+                process.env.NEXT_PUBLIC_GOOGLE_SCRIPT_URL!,
                 {
                     method: "POST",
                     headers: {
