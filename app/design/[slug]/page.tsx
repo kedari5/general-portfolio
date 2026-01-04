@@ -89,8 +89,8 @@ export default async function DesignDetailPage({ params }: { params: Promise<{ s
             <div className="relative z-10 max-w-[1280px] mx-auto px-6 md:px-12 py-16">
                 {/* Back Button */}
                 <Link
-                    href="/design"
-                    className="inline-flex items-center gap-2 text-[14px] font-medium text-muted-foreground hover:text-foreground transition-colors mb-12 group"
+                    href="/#designs"
+                    className="inline-flex items-center gap-2 text-[14px] font-medium text-muted-foreground hover:text-primary transition-colors mb-12 group focus:outline-none"
                 >
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="group-hover:-translate-x-1 transition-transform"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
                     Design
@@ -165,7 +165,7 @@ export default async function DesignDetailPage({ params }: { params: Promise<{ s
                             {project.tools.split(/[,.\n]+/).map((toolName) => toolName.trim()).filter(Boolean).map((tool) => (
                                 <div
                                     key={tool}
-                                    className="w-14 h-14 bg-slate-100 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-slate-200 dark:hover:bg-white/10 backdrop-blur-md rounded-[16px] transition-all hover:scale-105 active:scale-95 cursor-default flex items-center justify-center group relative shadow-sm"
+                                    className="w-14 h-14 bg-card border border-white/10 hover:bg-card/80 backdrop-blur-md rounded-[16px] transition-all hover:scale-105 active:scale-95 cursor-default flex items-center justify-center group relative shadow-sm"
                                     title={tool}
                                 >
                                     <BrandIcon name={tool} className="w-6 h-6" />
@@ -185,7 +185,7 @@ export default async function DesignDetailPage({ params }: { params: Promise<{ s
                             <div className="flex flex-col gap-12 max-w-[400px]">
                                 {project.gallery.map((img, idx) => (
                                     <div key={idx} className="space-y-4">
-                                        <div className="relative w-full border border-white/5 rounded-[16px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500" style={{ aspectRatio: '9/16' }}>
+                                        <div className="relative w-full bg-card border border-white/5 rounded-[24px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500" style={{ aspectRatio: '9/16' }}>
                                             <Image
                                                 src={img.src}
                                                 alt={img.caption}
@@ -202,7 +202,7 @@ export default async function DesignDetailPage({ params }: { params: Promise<{ s
                             <div className="flex gap-8 md:gap-12 overflow-x-auto pb-12 scrollbar-none snap-x snap-mandatory -mx-6 px-6 md:-mx-12 md:px-12">
                                 {project.gallery.map((img, idx) => (
                                     <div key={idx} className="flex-shrink-0 w-[300px] md:w-[500px] lg:w-[600px] space-y-4 snap-center">
-                                        <div className="relative aspect-video w-full border border-white/5 rounded-[16px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
+                                        <div className="relative aspect-video w-full bg-card border border-white/5 rounded-[24px] overflow-hidden shadow-sm hover:shadow-2xl transition-all duration-500">
                                             <Image
                                                 src={img.src}
                                                 alt={img.caption}

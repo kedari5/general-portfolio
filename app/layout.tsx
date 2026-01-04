@@ -6,7 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import BackgroundLayer from "@/components/BackgroundLayer";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Design & Code",
+  title: "Kedareswari | Design & Code",
   description: "A minimal, calm, and trustworthy portfolio showcasing product thinking and design craft.",
 };
 

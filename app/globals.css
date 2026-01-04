@@ -39,9 +39,9 @@
   --bg-main: #010a2e;
   --bg-alt: #010a2e;
   --bg-surface: #010a2e;
-  --bg-card: #0a143d;
+  --bg-card: #112a64;
   --bg-popup: rgba(1, 10, 46, 0.7);
-  /* Slightly lighter clear Navy for dark cards */
+  /* Slightly lighter clear Navy for dark cards specifically made distinct */
   --text-primary: #F8FAFC;
   --text-secondary: #94A3B8;
   --border-soft: #1E293B;
@@ -72,7 +72,7 @@
 
   h1,
   h2 {
-    background: linear-gradient(to right, #0122a8, #6FAEFF);
+    background: linear-gradient(to right, #0a28a0, #83b7fc);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent !important;
@@ -82,7 +82,7 @@
   /* In dark mode, apply vibrant and readable gradients */
   .dark h1,
   .dark h2 {
-    background: linear-gradient(to right, #0122a8, #6FAEFF);
+    background: linear-gradient(to right, #143fe7, #81b5f8);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent !important;
@@ -257,13 +257,15 @@
   letter-spacing: 0.05em;
 }
 
-.filter-invert {
-  filter: invert(100%) hue-rotate(180deg);
+/* High Contrast / Invert Colors */
+html.filter-invert {
+  filter: invert(100%) hue-rotate(180deg) !important;
 }
 
-.filter-invert img,
-.filter-invert video,
-.filter-invert .bg-image-container {
+html.filter-invert img,
+html.filter-invert video,
+html.filter-invert .bg-image-container,
+html.filter-invert [style*="background-image"] {
   filter: invert(100%) hue-rotate(180deg) !important;
 }
 

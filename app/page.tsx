@@ -58,7 +58,7 @@ export default function Home() {
               href="/docs/resume.docx"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 bg-secondary text-secondary-foreground text-[16px] font-medium rounded-full transition-all focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 hover:bg-secondary/90 active:scale-[0.98]"
+              className="px-8 py-3.5 bg-primary/10 backdrop-blur-md text-foreground text-[16px] font-medium rounded-full border-2 border-primary shadow-[inset_0_0_20px_rgba(111,174,255,0.2)] transition-all focus:outline-none hover:shadow-[inset_0_0_30px_rgba(111,174,255,0.4)] hover:bg-primary/20 active:scale-[0.98]"
             >
               Resume
             </a>

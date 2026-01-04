@@ -44,12 +44,12 @@ const projects = [
     },
     {
         id: "portfolio",
-        title: "Personal Portfolio",
+        title: "Portfolio",
         category: "Product Design",
         role: "Case Study",
         description: "A calm, structured digital garden built for recruiters and peers.",
         image: "/images/projects/personal-portfolio-mockup.png",
-        link: "/projects/personal-portfolio",
+        link: "/projects/portfolio",
     },
 ];
 

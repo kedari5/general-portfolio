@@ -6,7 +6,7 @@ export default function Footer() {
         <footer className="border-t border-white/5 py-12 bg-background transition-colors duration-200">
             <div className="max-w-[1120px] mx-auto px-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-8 text-sm text-muted-foreground">
                 <div className="flex flex-col gap-2">
-                    <span>&copy; {new Date().getFullYear()} Portfolio. All rights reserved.</span>
+                    <span>&copy; {new Date().getFullYear()} Kedareswari. All rights reserved.</span>
                     <span>Designed with care and accessibility in mind.</span>
                 </div>
 

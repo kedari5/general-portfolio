@@ -9,10 +9,10 @@ export default function SitemapPage() {
             title: "Main Pages",
             links: [
                 { name: "Home", href: "/" },
+                { name: "About", href: "/#about" },
                 { name: "Projects", href: "/#projects" },
                 { name: "Work & Design", href: "/#designs" },
                 { name: "Capabilities", href: "/#capabilities" },
-                { name: "About", href: "/#about" },
                 { name: "Contact", href: "/contact" },
             ]
         },
@@ -23,15 +23,15 @@ export default function SitemapPage() {
                 { name: "Build Bond", href: "/projects/build-bond" },
                 { name: "Krishi Sakhi", href: "/projects/krishi-sakhi" },
                 { name: "PM-AJAY", href: "/projects/pm-ajay" },
-                { name: "Personal Portfolio", href: "/projects/portfolio" },
+                { name: "Portfolio", href: "/projects/portfolio" },
             ]
         },
         {
             title: "Work & Design",
             links: [
-                { name: "Personal Logo", href: "/design/personal-logo" },
-                { name: "Build Bond Logo", href: "/design/build-bond-logo" },
-                { name: "Posters & Visuals", href: "/design/posters" },
+                { name: "Kedareswari Identity", href: "/design/personal-identity" },
+                { name: "Build Bond Identity", href: "/design/build-bond-identity" },
+                { name: "Creative Minds Poster", href: "/design/creative-minds-poster" },
             ]
         },
         {
@@ -49,7 +49,7 @@ export default function SitemapPage() {
         <div className="min-h-[calc(100dvh-64px)] w-full flex flex-col pt-12 md:pt-24 pb-24 px-6 md:px-12 max-w-[1120px] mx-auto select-none">
 
             <div className="mb-16">
-                <h1 className="text-[48px] leading-[1.1] font-medium mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#0122a8] to-[#6FAEFF] dark:from-white dark:to-[#38BDF8]">
+                <h1 className="text-[48px] leading-[1.1] font-medium mb-6">
                     Site Map
                 </h1>
                 <p className="text-[20px] text-muted-foreground font-light max-w-2xl">

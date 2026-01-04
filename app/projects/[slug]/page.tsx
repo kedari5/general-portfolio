@@ -115,8 +115,8 @@ const projectsData: Record<string, {
             { src: "/images/pm-ajay/features.png", caption: "Key Features" }
         ]
     },
-    "personal-portfolio": {
-        title: "Personal Portfolio",
+    "portfolio": {
+        title: "Portfolio",
         category: "Product Case Study",
         role: "Design & Development",
         content: [
@@ -133,7 +133,7 @@ const projectsData: Record<string, {
                 body: "Figma, React, Next.js, GitHub, Vercel, Spreadsheets, Google Apps Script"
             }
         ],
-        timeline: "2025",
+        timeline: "2026",
         imageAspectRatio: "horizontal",
         images: [
             { src: "/images/portfolio/home.png", caption: "Home Page" },
@@ -161,7 +161,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             <div className="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12 py-24 select-none">
                 {/* Header */}
                 <div className="mb-24">
-                    <Link href="/projects" className="text-muted-foreground hover:text-foreground transition-colors mb-8 inline-block focus:outline-none focus:ring-2 focus:ring-ring rounded px-1">&larr; Back to Projects</Link>
+                    <Link href="/#projects" className="text-muted-foreground hover:text-primary transition-colors mb-8 inline-block focus:outline-none">&larr; Back to Projects</Link>
                     <h1 className="text-[48px] sm:text-[56px] md:text-[64px] leading-[1.1] font-medium mb-4 tracking-tight">{project.title}</h1>
                     <p className="text-[20px] md:text-[24px] leading-[32px] text-muted-foreground font-light">{project.category}</p>
                 </div>
@@ -185,7 +185,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                                                     {block.split(/[,/\n]+/).map((toolName) => toolName.trim()).filter(Boolean).map((tool) => (
                                                         <div
                                                             key={tool}
-                                                            className="w-14 h-14 bg-slate-100 dark:bg-white/5 border border-black/5 dark:border-white/10 hover:bg-slate-200 dark:hover:bg-white/10 backdrop-blur-md rounded-[16px] transition-all hover:scale-105 active:scale-95 cursor-default flex items-center justify-center group relative shadow-sm"
+                                                            className="w-14 h-14 bg-card border border-white/10 hover:bg-card/80 backdrop-blur-md rounded-[16px] transition-all hover:scale-105 active:scale-95 cursor-default flex items-center justify-center group relative shadow-sm"
                                                             title={tool}
                                                         >
                                                             <BrandIcon name={tool} className="w-6 h-6" />
@@ -209,7 +209,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
 
                     {/* Sidebar Details */}
                     <div className="md:col-span-4 lg:pl-12">
-                        <div className="p-8 bg-surface/80 backdrop-blur-md rounded-[28px] border border-white/5 sticky top-24 shadow-sm hover:shadow-md transition-all duration-500">
+                        <div className="p-8 bg-surface dark:bg-[#2e54a5]/10 backdrop-blur-md rounded-[28px] border-2 border-primary dark:border-[#2e54a5] sticky top-24 shadow-[inset_0_0_20px_rgba(111,174,255,0.2)] dark:shadow-[inset_0_0_30px_rgba(46,84,165,0.3)] hover:shadow-[inset_0_0_30px_rgba(111,174,255,0.4)] dark:hover:shadow-[inset_0_0_40px_rgba(46,84,165,0.5)] transition-all duration-500">
                             <h3 className="text-xs font-bold uppercase tracking-[0.2em] mb-10">Project Details</h3>
                             <ul className="space-y-8">
                                 <li className="flex flex-col gap-2">
@@ -236,7 +236,7 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                         <div className="flex gap-8 md:gap-12 overflow-x-auto pb-12 scrollbar-none snap-x snap-mandatory -mx-6 px-6 md:-mx-12 md:px-12">
                             {project.images.map((img, idx) => (
                                 <div key={idx} className={`flex-shrink-0 space-y-4 snap-center ${project.imageAspectRatio === "horizontal" ? "w-[400px] md:w-[600px] lg:w-[800px]" : "w-[280px] md:w-[320px] lg:w-[360px]"}`}>
-                                    <div className={`relative w-full bg-surface border border-white/5 rounded-[24px] md:rounded-[32px] overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ${project.imageAspectRatio === "horizontal" ? "aspect-video" : "aspect-[9/19.5]"}`}>
+                                    <div className={`relative w-full bg-card border border-white/5 rounded-[24px] md:rounded-[32px] overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 ${project.imageAspectRatio === "horizontal" ? "aspect-video" : "aspect-[9/19.5]"}`}>
                                         <Image
                                             src={img.src}
                                             alt={img.caption}

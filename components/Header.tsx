@@ -59,7 +59,7 @@ export default function Header() {
                         {mounted && (
                             <button
                                 onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
-                                className="flex items-center justify-center w-12 h-12 rounded-full border border-white/5 bg-surface shadow-sm text-foreground hover:bg-muted transition-all focus:outline-none focus:ring-2 focus:ring-primary"
+                                className="flex items-center justify-center w-12 h-12 rounded-full border border-white/5 bg-surface shadow-sm text-foreground hover:bg-muted hover:text-primary transition-all focus:outline-none focus:ring-2 focus:ring-primary"
                                 aria-label="Toggle Theme"
                             >
                                 {resolvedTheme === 'dark' ? (
@@ -73,10 +73,10 @@ export default function Header() {
                         {/* Menu Button (Hamburger) */}
                         <button
                             onClick={() => setIsMenuOpen(true)}
-                            className="flex items-center justify-center w-12 h-12 rounded-full text-foreground hover:bg-muted transition-all focus:outline-none focus:ring-2 focus:ring-primary"
+                            className="flex items-center justify-center w-12 h-12 rounded-full text-foreground hover:bg-muted hover:text-primary transition-all focus:outline-none focus:ring-2 focus:ring-primary group"
                             aria-label="Open Menu"
                         >
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <svg className="group-hover:text-primary transition-colors" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <line x1="3" y1="12" x2="21" y2="12" />
                                 <line x1="3" y1="6" x2="21" y2="6" />
                                 <line x1="3" y1="18" x2="21" y2="18" />
@@ -142,13 +142,13 @@ export default function Header() {
                                 <div className="flex gap-2">
                                     <button
                                         onClick={() => setTheme('light')}
-                                        className={`px-3 py-1.5 rounded-full text-[12px] font-medium transition-all ${resolvedTheme === 'light' ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80'}`}
+                                        className={`px-3 py-1.5 rounded-full text-[12px] font-medium transition-all border-2 ${resolvedTheme === 'light' ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-muted-foreground border-transparent hover:border-primary hover:text-foreground'}`}
                                     >
                                         Light Theme
                                     </button>
                                     <button
                                         onClick={() => setTheme('dark')}
-                                        className={`px-3 py-1.5 rounded-full text-[12px] font-medium transition-all ${resolvedTheme === 'dark' ? 'bg-primary text-primary-foreground' : 'bg-muted text-muted-foreground hover:bg-muted/80'}`}
+                                        className={`px-3 py-1.5 rounded-full text-[12px] font-medium transition-all border-2 ${resolvedTheme === 'dark' ? 'bg-primary text-primary-foreground border-primary' : 'bg-transparent text-muted-foreground border-transparent hover:border-primary hover:text-foreground'}`}
                                     >
                                         Dark Theme
                                     </button>
