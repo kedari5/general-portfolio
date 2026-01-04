@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import BackgroundLayer from "@/components/BackgroundLayer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Kedareswari | Design & Code",
@@ -24,6 +25,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Script src="https://t.contentsquare.net/uxa/feb4a2c862001.js" strategy="afterInteractive" />
           <Header />
           <div className="flex-1 relative">
             <BackgroundLayer />
