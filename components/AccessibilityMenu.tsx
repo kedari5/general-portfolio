@@ -31,6 +31,32 @@ export default function AccessibilityMenu() {
     const [largeCursor, setLargeCursor] = useState(false);
     const [textToSpeech, setTextToSpeech] = useState(false);
 
+    // Text to Speech Effect
+    useEffect(() => {
+        if (!textToSpeech) {
+            window.speechSynthesis.cancel();
+            return;
+        }
+
+        const handleMouseOver = (e: MouseEvent) => {
+            const target = e.target as HTMLElement;
+            // Try to find meaningful text: aria-label -> alt -> textContent
+            const text = target.getAttribute("aria-label") || target.getAttribute("alt") || target.innerText;
+
+            if (text && text.trim().length > 0) {
+                window.speechSynthesis.cancel(); // Stop previous
+                const utterance = new SpeechSynthesisUtterance(text);
+                window.speechSynthesis.speak(utterance);
+            }
+        };
+
+        document.addEventListener("mouseover", handleMouseOver);
+        return () => {
+            document.removeEventListener("mouseover", handleMouseOver);
+            window.speechSynthesis.cancel();
+        };
+    }, [textToSpeech]);
+
     useEffect(() => {
         // Apply changes to document root
         const root = document.documentElement;
@@ -40,7 +66,12 @@ export default function AccessibilityMenu() {
 
         // Line Height
         root.style.setProperty("--acc-line-height", `${lineHeight}%`);
-        document.body.style.lineHeight = `${lineHeight}%`;
+        // Force line height on all elements when modified from default
+        if (lineHeight !== 150) {
+            document.body.classList.add("force-line-height");
+        } else {
+            document.body.classList.remove("force-line-height");
+        }
 
         // Letter Spacing
         document.body.style.letterSpacing = `${letterSpacing}px`;

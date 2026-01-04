@@ -247,8 +247,13 @@
 
 /* Accessibility Utility Classes */
 
-.font-dyslexia {
-  font-family: 'Open Dyslexic', 'Comic Sans MS', sans-serif !important;
+.force-line-height * {
+  line-height: var(--acc-line-height) !important;
+}
+
+.font-dyslexia,
+.font-dyslexia * {
+  font-family: 'Open Dyslexic', 'Comic Sans MS', 'Chalkboard SE', 'Comic Neue', sans-serif !important;
   letter-spacing: 0.05em;
 }
 
@@ -257,33 +262,41 @@
 }
 
 .filter-invert img,
-.filter-invert video {
+.filter-invert video,
+.filter-invert .bg-image-container {
   filter: invert(100%) hue-rotate(180deg) !important;
 }
 
 .highlight-links a {
   text-decoration: underline !important;
-  text-decoration-thickness: 2px !important;
+  text-decoration-thickness: 3px !important;
   text-underline-offset: 4px !important;
-  background-color: yellow !important;
-  color: black !important;
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 0 2px #ffff00;
+  border-radius: 2px;
 }
 
 .dark .highlight-links a {
-  background-color: yellow !important;
-  color: black !important;
+  background-color: #ffff00 !important;
+  color: #000000 !important;
+  box-shadow: 0 0 0 2px #ffff00;
 }
 
 .hide-images img,
-.hide-images svg:not(.lucide),
-.hide-images .bg-image {
+.hide-images svg:not(.lucide-icon),
+.hide-images video,
+.hide-images [style*="background-image"] {
   opacity: 0 !important;
   visibility: hidden !important;
 }
 
+/* Large Cursor using a simple geometric shape to avoid cross-origin issues */
 .cursor-large,
-.cursor-large * {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2" stroke-linejoin="round"><path d="M3 3l7.07 16.97 2.51-7.39 7.39-2.51L3 3z"/><path d="M13 13l6 6"/></svg>') 0 0, auto !important;
+.cursor-large *,
+.cursor-large a,
+.cursor-large button {
+  cursor: url('data:image/svg+xml;utf8,<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 12L24 40L29.5 29.5L40 24L12 12Z" fill="black" stroke="white" stroke-width="2"/></svg>') 0 0, auto !important;
 }
 
 /* Screen Reader Only Class (Standard) */
