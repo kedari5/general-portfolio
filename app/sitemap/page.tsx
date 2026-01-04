@@ -13,7 +13,7 @@ export default function SitemapPage() {
                 { name: "Work & Design", href: "/#designs" },
                 { name: "Capabilities", href: "/#capabilities" },
                 { name: "About", href: "/#about" },
-                { name: "Contact", href: "/#collaboration" },
+                { name: "Contact", href: "/contact" },
             ]
         },
         {
@@ -35,10 +35,12 @@ export default function SitemapPage() {
             ]
         },
         {
-            title: "Resources",
+            title: "Resources & Socials",
             links: [
-                { name: "Resume (Docs)", href: "/docs/resume.docx" },
-                { name: "Source Code", href: "https://github.com/kedari5" },
+                { name: "Resume (View/Download)", href: "/docs/resume.docx" },
+                { name: "LinkedIn", href: "https://www.linkedin.com/in/kedareswari-bolisetty-5781212ba/" },
+                { name: "Behance", href: "https://www.behance.net/kedaribolisetty" },
+                { name: "GitHub", href: "https://github.com/kedari5" },
             ]
         }
     ];
