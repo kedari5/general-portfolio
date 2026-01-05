@@ -19,7 +19,7 @@ export default function ErrorPage() {
                     </h1>
 
                     <p className="text-[18px] md:text-[20px] leading-[1.6] text-muted-foreground mb-10 max-w-md">
-                        We couldn't process your request. This might be due to a network error or a temporary issue with the submission service.
+                        We couldn&apos;t process your request. This might be due to a network error or a temporary issue with the submission service.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full justify-center">

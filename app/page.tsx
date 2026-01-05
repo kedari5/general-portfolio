@@ -33,7 +33,7 @@ export default function Home() {
           {/* Text Stack */}
           <div className="flex flex-col items-center gap-6">
             <p className="text-[20px] md:text-[22px] text-muted-foreground font-light tracking-wide">
-              Hi, I'm
+              Hi, I&apos;m
             </p>
 
             <h1 className="text-[56px] sm:text-[72px] md:text-[88px] leading-[1.1] font-medium tracking-tight hero-name">

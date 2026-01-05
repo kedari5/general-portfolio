@@ -73,7 +73,7 @@ export default function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                     <div className="p-8 md:p-10 pt-12">
                         <div className="mb-8">
                             <h3 className={`text-3xl font-medium mb-3 tracking-tight ${isDark ? 'bg-gradient-to-b from-white to-[#6FAEFF] bg-clip-text text-transparent' : 'bg-gradient-to-b from-[#0122a8] to-[#3A7BEF] bg-clip-text text-transparent'}`}>Get in touch</h3>
-                            <p className={`${isDark ? 'text-zinc-400' : 'text-zinc-500'}`}>Tell me about your project or just say hi. I'm usually quick to respond.</p>
+                            <p className={`${isDark ? 'text-zinc-400' : 'text-zinc-500'}`}>Tell me about your project or just say hi. I&apos;m usually quick to respond.</p>
                         </div>
 
                         <form
@@ -153,7 +153,7 @@ export default function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                                 Glad to hear from you!
                             </h2>
                             <p className={`text-[18px] font-medium leading-relaxed ${isDark ? 'text-zinc-400' : 'text-zinc-500'}`}>
-                                We'll connect with you soon.
+                                We&apos;ll connect with you soon.
                             </p>
                         </div>
 
@@ -172,7 +172,7 @@ export default function ContactPopup({ isOpen, onClose }: ContactPopupProps) {
                                 Oops! Something went wrong.
                             </h2>
                             <p className={`text-[18px] font-medium leading-relaxed ${isDark ? 'text-zinc-400' : 'text-zinc-500'}`}>
-                                We couldn't send your message. Please try again.
+                                We couldn&apos;t send your message. Please try again.
                             </p>
                         </div>
 

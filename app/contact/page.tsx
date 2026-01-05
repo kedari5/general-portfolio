@@ -9,7 +9,7 @@ export default function ContactPage() {
         <div className="relative min-h-[calc(100dvh-64px)] overflow-hidden bg-transparent">
             <div className="relative z-10 max-w-[1120px] mx-auto px-6 md:px-12 py-24 select-none">
                 <div className="max-w-xl mx-auto text-center mb-16">
-                    <h1 className="text-[48px] leading-[56px] font-medium mb-6">Let's Connect</h1>
+                    <h1 className="text-[48px] leading-[56px] font-medium mb-6">Let&apos;s Connect</h1>
                     <p className="text-[20px] leading-[30px] text-muted-foreground">
                         Open to new opportunities.
                         Feel free to get in touch!
@@ -108,7 +108,7 @@ function ContactForm() {
                 </div>
                 <h2 className="text-2xl font-bold mb-2">Message Sent!</h2>
                 <p className="text-muted-foreground mb-4">
-                    Thank you for reaching out. We'll be in touch soon.
+                    Thank you for reaching out. We&apos;ll be in touch soon.
                 </p>
                 <p className="text-sm text-muted-foreground animate-pulse">Redirecting to home...</p>
             </div>
@@ -123,7 +123,7 @@ function ContactForm() {
                 </div>
                 <h2 className="text-2xl font-bold mb-2 text-red-500">Submission Failed</h2>
                 <p className="text-muted-foreground mb-8">
-                    We're sorry, but we couldn't process your request right now.
+                    We&apos;re sorry, but we couldn&apos;t process your request right now.
                 </p>
                 <button
                     onClick={() => setStatus("idle")}
