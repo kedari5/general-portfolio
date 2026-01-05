@@ -1,3 +1,4 @@
+// LAST_DEPLOY_TRIGGER: 2026-01-05 09:44
 import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
